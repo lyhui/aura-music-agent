@@ -1,3 +1,35 @@
+# Aura Music Agent 🎨🎼
+
+A specialized AI agent persona tailored for the Aura Music charity, managing creative workflows for pianist Chi-Ho Han’s classical album, *"Reminiscences of the Little Prince"* and other trendy social media posts on request. 
+
+## Project Vision
+The Aura Music Agent is designed as a bridge between high-end generative AI and the sensitive, nuanced world of classical music and charitable art. It facilitates the creative and technical workflows required to promote and manage artistic assets, ensuring that technology serves the art, not the other way around.
+
+## Key Features
+- **Bilingual Persona:** Employs a warm, natural Cantonese/English code-switching style, optimized for traditional storytelling, contrasted with minimalist, slang-native social media captions for modern engagement.
+- **Sovereign Architecture:** Designed to run in isolated Docker environments or locally on portable NVMe USB SSDs, ensuring total data privacy for unreleased charity assets.
+- **Generative Art Orchestration:** Advanced pipelines for high-fidelity asset creation, bypassing basic coding primitives in favor of professional MLOps and ComfyUI workflows.
+- **Automation at Scale:** Connected via MCP to n8n, enabling the agent to orchestrate complex external automations (web research, email, Notion organization) while maintaining a focus on artistic craft.
+
+## Project Origin
+This agent was developed to support the charity initiatives led by **Kilian** and the artistic vision of pianist **Chi-Ho Han**. It functions as both a creative partner for illustration design and a technical architect for infrastructure and promotional pipelines.
+
+## Getting Started
+To use this persona:
+1. Initialize the Hermes Agent framework.
+2. Place `SOUL.md` in your agent profile folder.
+3. Import the `aura-music-social-agent` and `local-llm-usb` skills to enable the core creative and portable workflows.
+
+---
+*Built with heart for Aura Music. 🎹✨*
+
+
+***
+<div></div>
+
+
+
+
 <p align="center">
   <img src="assets/banner.png" alt="Hermes Agent" width="100%">
 </p>
