@@ -1,27 +1,38 @@
 # Aura Music Agent 🎨🎼
 
-A specialized AI agent persona tailored for the Aura Music charity, managing creative workflows for pianist Chi-Ho Han’s classical album, *"Reminiscences of the Little Prince"* and other trendy social media posts on request. 
+Based on the Hermes agent foundation, it is a specialised AI agent persona tailored for the Aura Music charity, managing creative workflows for social media posts on request. 
 
 ## Project Vision
 The Aura Music Agent is designed as a bridge between high-end generative AI and the sensitive, nuanced world of classical music and charitable art. It facilitates the creative and technical workflows required to promote and manage artistic assets, ensuring that technology serves the art, not the other way around.
 
 ## Key Features
-- **Bilingual Persona:** Employs a warm, natural Cantonese/English code-switching style, optimized for traditional storytelling, contrasted with minimalist, slang-native social media captions for modern engagement.
-- **Sovereign Architecture:** Designed to run in isolated Docker environments or locally on portable NVMe USB SSDs, ensuring total data privacy for unreleased charity assets.
-- **Generative Art Orchestration:** Advanced pipelines for high-fidelity asset creation, bypassing basic coding primitives in favor of professional MLOps and ComfyUI workflows.
-- **Automation at Scale:** Connected via MCP to n8n, enabling the agent to orchestrate complex external automations (web research, email, Notion organization) while maintaining a focus on artistic craft.
+- **Bilingual Persona:** Employs a warm, natural Cantonese/English code-switching style, optimised for traditional storytelling, contrasted with minimalist, slang-native social media captions for modern engagement.
+- **Sovereign Architecture:** Designed to run in isolated Docker environments, ensuring total data privacy for unreleased charity assets.
+- **Generative Visual Orchestration:** Advanced pipelines for high-fidelity asset creation, bypassing basic coding primitives in favour of professional MLOps and ComfyUI workflows.
+- **Automation at Scale:** Connected to n8n, enabling the agent to orchestrate complex external automations (e.g. web research) while maintaining a focus on artistic craft.
+
 
 ## Project Origin
-This agent was developed to support the charity initiatives led by **Kilian** and the artistic vision of pianist **Chi-Ho Han**. It functions as both a creative partner for illustration design and a technical architect for infrastructure and promotional pipelines.
+This agent was developed to support the charity initiatives led by **Kilian Chan**. It functions as both a creative partner for illustration design and a technical architect for infrastructure and promotional pipelines.
 
-## Getting Started
-To use this persona:
-1. Initialize the Hermes Agent framework.
-2. Place `SOUL.md` in your agent profile folder.
-3. Import the `aura-music-social-agent` and `local-llm-usb` skills to enable the core creative and portable workflows.
 
 ---
 *Built with heart for Aura Music. 🎹✨*
+About Aura Music
+
+<p align="left">
+  <img src="logo_final_RGB_Black.png/" alt ="Aura Music" width ="12%")
+ </p>
+ 
+Aura Music is a young education charity founded in 2019 to foster a lifelong love of learning through the joy of music—for both the young in age and the young at heart.
+
+Our activities take music education beyond extracurricular instrument practice and place it at the centre of learning. To inspire curiosity in music’s relationship to the wider world, we organise interactive workshops for children, mentorship programmes for young adults, and pre- and post-concert activities for audiences of all ages. And to bring the wider world back to music, we curate concerts that introduce young Asian musicians to new audiences, collaborators, and ideas.
+
+Whatever the format, our learning activities are fueled by one belief: that behind every sound is a story, and behind every story is a connection. To fields like philosophy, physics, linguistics, and architecture. To other people, places, and cultures. And ultimately, to ourselves. 
+ 
+Explore those stories with us by subscribing to our updates, registering for an activity, or becoming a collaborator.
+
+Website: https://auramusic.asia/
 
 
 ***
