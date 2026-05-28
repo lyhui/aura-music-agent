@@ -1,48 +1,77 @@
 # Aura Music Agent 🎨🎼
 
-Based on the Hermes agent foundation, it is a specialised AI agent persona tailored for the Aura Music charity, managing creative workflows for social media posts on request. 
+An automated operations and social media partner built for **Aura Music** on top of the Hermes Agent framework. 
 
-## Project Vision
-The Aura Music Agent is designed as a bridge between high-end generative AI and the sensitive, nuanced world of classical music and charitable art. It facilitates the creative and technical workflows required to promote and manage artistic assets, ensuring that technology serves the art, not the other way around.
-
-## Key Features
-- **Bilingual Persona:** Employs a warm, natural Cantonese/English code-switching style, optimised for traditional storytelling, contrasted with minimalist, slang-native social media captions for modern engagement.
-- **Sovereign Architecture:** Designed to run in isolated Docker environments, ensuring total data privacy for unreleased charity assets.
-- **Generative Visual Orchestration:** Advanced pipelines for high-fidelity asset creation, bypassing basic coding primitives in favour of professional MLOps and ComfyUI workflows.
-- **Automation at Scale:** Connected to n8n, enabling the agent to orchestrate complex external automations (e.g. web research) while maintaining a focus on artistic craft.
-
-
-## Project Origin
-This agent was developed to support the charity initiatives led by **Kilian Chan**. It functions as both a creative partner for illustration design and a technical architect for infrastructure and promotional pipelines.
-
-
----
-*Built with heart for Aura Music. 🎹✨*
-About Aura Music
+This repository houses the specialized agent persona, memory layers, and custom skill configurations used to automate social media curation, trend analysis, and workflow orchestration for our emerging charity.
 
 <p align="left">
   <img src="logo_final_RGB_Black.png/" alt ="Aura Music" width ="12%")
  </p>
  
-Aura Music is a young education charity founded in 2019 to foster a lifelong love of learning through the joy of music—for both the young in age and the young at heart.
-
-Our activities take music education beyond extracurricular instrument practice and place it at the centre of learning. To inspire curiosity in music’s relationship to the wider world, we organise interactive workshops for children, mentorship programmes for young adults, and pre- and post-concert activities for audiences of all ages. And to bring the wider world back to music, we curate concerts that introduce young Asian musicians to new audiences, collaborators, and ideas.
-
-Whatever the format, our learning activities are fueled by one belief: that behind every sound is a story, and behind every story is a connection. To fields like philosophy, physics, linguistics, and architecture. To other people, places, and cultures. And ultimately, to ourselves. 
- 
-Explore those stories with us by subscribing to our updates, registering for an activity, or becoming a collaborator.
-
-Website: https://auramusic.asia/
+> **Aura Music in one sentence:** A charity that lets your curiosity explore the world through music. 🎹✨ [Visit our website](https://auramusic.asia/)
+> 
 
 
-***
-<div></div>
+---
+
+## 💭 Project Vision & Core Goal
+
+As an emerging charity, we spark with incredible ideas but are heavily stretched by our daily operations. The **Aura Music Agent** was created to act as an autonomous operations partner, handling background logistics so our human team can focus on scaling the charity's core mission.
+
+By pairing **Hermes Agent** with external automations, this system creates a seamless bridge between instant messaging and multi-step organizational workflows.
+
+### Key Features
+* **Bilingual Storyteller:** Employs a natural Cantonese/English code-switching style tailored for authentic storytelling, paired with trendy, modern social media captions for public engagement.
+* **Direct Messenger Integration:** Sits inside our team's Telegram group. Anyone on the team (or the boss!) can throw an unfiltered idea or inspiration directly to the agent to spin up a draft.
+* **Hybrid Automation Architecture:** When local cloud infrastructure hits limitations (like search engine IP blocks), the agent seamlessly hands off data fetching to a self-hosted **n8n workflow**, pulling back a daily social monitor summary automatically.
+* **Sovereign Infrastructure:** Containerized and deployed via Docker on Hostinger, ensuring total privacy for our charity assets and unreleased campaign materials.
+
+---
+
+## 🛠️ Tech Stack & Implementation
+
+* **Core Engine:** Hermes Framework (Perception-Reasoning-Action loop)
+* **Hosting Environment:** Hostinger (Docker & Docker-Compose)
+* **Orchestration Layer:** n8n (Automated social monitoring and web queries)
+* **Memory & Skills System:** Powered by file-based `SKILL.md` architecture. Our primary operational blueprint lives inside the `aura-music-social-agent` skill, tracking operational knowledge and tone criteria without relying on fragile runtime prompt strings.
+
+---
+
+## 🚀 Quick Start (For Our Team)
+
+### Prerequisites
+Ensure your `.env` file is fully populated with your `TELEGRAM_BOT_TOKEN`, `HOSTINGER_DEPLOY_KEY`, and `N8N_WEBHOOK_URL`. 
+
+### Running Locally with Docker
+To spin up the Aura Music Agent environment along with its integrated WebUI:
+
+```bash
+# Clone the repository
+git clone [https://github.com/lyhui/aura-music-agent.git](https://github.com/lyhui/aura-music-agent.git)
+cd aura-music-agent
+
+# Spin up the containers
+docker-compose up -d
+```
+
+### Initializing the Skill
+Once inside the agent terminal or interacting via Telegram, load the specialized charity configuration:
+
+```bash
+/personality aura-music-social-agent
+```
+
+---
+## 🗺️ Roadmap
+- WhatsApp Integration: Auto-confirmation pipelines for our workshop and event registrations.
+- Direct Publishing: Enabling the agent to safely publish approved drafts from Telegram straight to our social channels.
 
 
 
+---
 
 <p align="center">
-  <img src="assets/banner.png" alt="Hermes Agent" width="100%">
+  <img src="assets/banner.png" alt="Hermes Agent" width="50%">
 </p>
 
 # Hermes Agent ☤
@@ -69,169 +98,37 @@ Use any model you want — [Nous Portal](https://portal.nousresearch.com), [Open
 <tr><td><b>Research-ready</b></td><td>Batch trajectory generation, trajectory compression for training the next generation of tool-calling models.</td></tr>
 </table>
 
+
 ---
 
-## Quick Install
+## ⚙️ Core Hermes Setup & Reference
 
-### Linux, macOS, WSL2, Termux
+Since this project is a specialized fork of the **Hermes Agent** ecosystem, you can still initialize, configure, and manage the base framework using the standard core tooling.
+
+### Installation Quick-Reference
+
+For standard Linux, macOS, or WSL2 environments, you can pull the base dependencies using the unified installer:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
+curl -fsSL [https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh](https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh) | bash
 ```
 
-### Windows (native, PowerShell) — Early Beta
+## Essential Commands
+Once installed, use these primary CLI commands to configure and launch your local framework:
 
-> **Heads up:** Native Windows support is **early beta**. It installs and runs, but hasn't been road-tested as broadly as our Linux/macOS/WSL2 paths. Please [file issues](https://github.com/NousResearch/hermes-agent/issues) when you hit rough edges. For the most battle-tested Windows setup today, run the Linux/macOS one-liner above inside **WSL2**.
 
-Run this in PowerShell:
+hermes setup        # Run the full configuration wizard
+hermes model        # Select your LLM provider (Ollama, OpenRouter, OpenAI, etc.)
+hermes tools        # Toggle active tool permissions
+hermes gateway      # Launch the messaging gateway adapter (Telegram/n8n connection)
 
-```powershell
-iex (irm https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.ps1)
-```
 
-The installer handles everything: uv, Python 3.11, Node.js, ripgrep, ffmpeg, **and a portable Git Bash** (MinGit, unpacked to `%LOCALAPPDATA%\hermes\git` — no admin required, completely isolated from any system Git install).  Hermes uses this bundled Git Bash to run shell commands.
+## 🤝 Contributing & Community
 
-If you already have Git installed, the installer detects it and uses that instead.  Otherwise a ~45MB MinGit download is all you need — it won't touch or interfere with any system Git.
+We welcome contributions specifically aimed at expanding the capabilities of the Aura Music operational workflows. For core engine bugs, documentation updates, or broader framework enhancements, please refer directly to the main upstream repository:
 
-> **Android / Termux:** The tested manual path is documented in the [Termux guide](https://hermes-agent.nousresearch.com/docs/getting-started/termux). On Termux, Hermes installs a curated `.[termux]` extra because the full `.[all]` extra currently pulls Android-incompatible voice dependencies.
->
-> **Windows:** Native Windows is supported as an **early beta** — the PowerShell one-liner above installs everything, but expect rough edges and please file issues when you hit them. If you'd rather use WSL2 (our most battle-tested Windows path), the Linux command works there too. Native Windows install lives under `%LOCALAPPDATA%\hermes`; WSL2 installs under `~/.hermes` as on Linux.  The only Hermes feature that currently needs WSL2 specifically is the browser-based dashboard chat pane (it uses a POSIX PTY — classic CLI and gateway both run natively).
+📚 Official Documentation: hermes-agent.nousresearch.com
+💻 Upstream Core Repo: NousResearch/hermes-agent
 
-After installation:
-
-```bash
-source ~/.bashrc    # reload shell (or: source ~/.zshrc)
-hermes              # start chatting!
-```
-
----
-
-## Getting Started
-
-```bash
-hermes              # Interactive CLI — start a conversation
-hermes model        # Choose your LLM provider and model
-hermes tools        # Configure which tools are enabled
-hermes config set   # Set individual config values
-hermes gateway      # Start the messaging gateway (Telegram, Discord, etc.)
-hermes setup        # Run the full setup wizard (configures everything at once)
-hermes claw migrate # Migrate from OpenClaw (if coming from OpenClaw)
-hermes update       # Update to the latest version
-hermes doctor       # Diagnose any issues
-```
-
-📖 **[Full documentation →](https://hermes-agent.nousresearch.com/docs/)**
-
-## CLI vs Messaging Quick Reference
-
-Hermes has two entry points: start the terminal UI with `hermes`, or run the gateway and talk to it from Telegram, Discord, Slack, WhatsApp, Signal, or Email. Once you're in a conversation, many slash commands are shared across both interfaces.
-
-| Action | CLI | Messaging platforms |
-|---------|-----|---------------------|
-| Start chatting | `hermes` | Run `hermes gateway setup` + `hermes gateway start`, then send the bot a message |
-| Start fresh conversation | `/new` or `/reset` | `/new` or `/reset` |
-| Change model | `/model [provider:model]` | `/model [provider:model]` |
-| Set a personality | `/personality [name]` | `/personality [name]` |
-| Retry or undo the last turn | `/retry`, `/undo` | `/retry`, `/undo` |
-| Compress context / check usage | `/compress`, `/usage`, `/insights [--days N]` | `/compress`, `/usage`, `/insights [days]` |
-| Browse skills | `/skills` or `/<skill-name>` | `/<skill-name>` |
-| Interrupt current work | `Ctrl+C` or send a new message | `/stop` or send a new message |
-| Platform-specific status | `/platforms` | `/status`, `/sethome` |
-
-For the full command lists, see the [CLI guide](https://hermes-agent.nousresearch.com/docs/user-guide/cli) and the [Messaging Gateway guide](https://hermes-agent.nousresearch.com/docs/user-guide/messaging).
-
----
-
-## Documentation
-
-All documentation lives at **[hermes-agent.nousresearch.com/docs](https://hermes-agent.nousresearch.com/docs/)**:
-
-| Section | What's Covered |
-|---------|---------------|
-| [Quickstart](https://hermes-agent.nousresearch.com/docs/getting-started/quickstart) | Install → setup → first conversation in 2 minutes |
-| [CLI Usage](https://hermes-agent.nousresearch.com/docs/user-guide/cli) | Commands, keybindings, personalities, sessions |
-| [Configuration](https://hermes-agent.nousresearch.com/docs/user-guide/configuration) | Config file, providers, models, all options |
-| [Messaging Gateway](https://hermes-agent.nousresearch.com/docs/user-guide/messaging) | Telegram, Discord, Slack, WhatsApp, Signal, Home Assistant |
-| [Security](https://hermes-agent.nousresearch.com/docs/user-guide/security) | Command approval, DM pairing, container isolation |
-| [Tools & Toolsets](https://hermes-agent.nousresearch.com/docs/user-guide/features/tools) | 40+ tools, toolset system, terminal backends |
-| [Skills System](https://hermes-agent.nousresearch.com/docs/user-guide/features/skills) | Procedural memory, Skills Hub, creating skills |
-| [Memory](https://hermes-agent.nousresearch.com/docs/user-guide/features/memory) | Persistent memory, user profiles, best practices |
-| [MCP Integration](https://hermes-agent.nousresearch.com/docs/user-guide/features/mcp) | Connect any MCP server for extended capabilities |
-| [Cron Scheduling](https://hermes-agent.nousresearch.com/docs/user-guide/features/cron) | Scheduled tasks with platform delivery |
-| [Context Files](https://hermes-agent.nousresearch.com/docs/user-guide/features/context-files) | Project context that shapes every conversation |
-| [Architecture](https://hermes-agent.nousresearch.com/docs/developer-guide/architecture) | Project structure, agent loop, key classes |
-| [Contributing](https://hermes-agent.nousresearch.com/docs/developer-guide/contributing) | Development setup, PR process, code style |
-| [CLI Reference](https://hermes-agent.nousresearch.com/docs/reference/cli-commands) | All commands and flags |
-| [Environment Variables](https://hermes-agent.nousresearch.com/docs/reference/environment-variables) | Complete env var reference |
-
----
-
-## Migrating from OpenClaw
-
-If you're coming from OpenClaw, Hermes can automatically import your settings, memories, skills, and API keys.
-
-**During first-time setup:** The setup wizard (`hermes setup`) automatically detects `~/.openclaw` and offers to migrate before configuration begins.
-
-**Anytime after install:**
-
-```bash
-hermes claw migrate              # Interactive migration (full preset)
-hermes claw migrate --dry-run    # Preview what would be migrated
-hermes claw migrate --preset user-data   # Migrate without secrets
-hermes claw migrate --overwrite  # Overwrite existing conflicts
-```
-
-What gets imported:
-- **SOUL.md** — persona file
-- **Memories** — MEMORY.md and USER.md entries
-- **Skills** — user-created skills → `~/.hermes/skills/openclaw-imports/`
-- **Command allowlist** — approval patterns
-- **Messaging settings** — platform configs, allowed users, working directory
-- **API keys** — allowlisted secrets (Telegram, OpenRouter, OpenAI, Anthropic, ElevenLabs)
-- **TTS assets** — workspace audio files
-- **Workspace instructions** — AGENTS.md (with `--workspace-target`)
-
-See `hermes claw migrate --help` for all options, or use the `openclaw-migration` skill for an interactive agent-guided migration with dry-run previews.
-
----
-
-## Contributing
-
-We welcome contributions! See the [Contributing Guide](https://hermes-agent.nousresearch.com/docs/developer-guide/contributing) for development setup, code style, and PR process.
-
-Quick start for contributors — clone and go with `setup-hermes.sh`:
-
-```bash
-git clone https://github.com/NousResearch/hermes-agent.git
-cd hermes-agent
-./setup-hermes.sh     # installs uv, creates venv, installs .[all], symlinks ~/.local/bin/hermes
-./hermes              # auto-detects the venv, no need to `source` first
-```
-
-Manual path (equivalent to the above):
-
-```bash
-curl -LsSf https://astral.sh/uv/install.sh | sh
-uv venv .venv --python 3.11
-source .venv/bin/activate
-uv pip install -e ".[all,dev]"
-scripts/run_tests.sh
-```
-
----
-
-## Community
-
-- 💬 [Discord](https://discord.gg/NousResearch)
-- 📚 [Skills Hub](https://agentskills.io)
-- 🐛 [Issues](https://github.com/NousResearch/hermes-agent/issues)
-- 🔌 [computer-use-linux](https://github.com/avifenesh/computer-use-linux) — Linux desktop-control MCP server for Hermes and other MCP hosts, with AT-SPI accessibility trees, Wayland/X11 input, screenshots, and compositor window targeting.
-- 🔌 [HermesClaw](https://github.com/AaronWong1999/hermesclaw) — Community WeChat bridge: Run Hermes Agent and OpenClaw on the same WeChat account.
-
----
-
-## License
-
-MIT — see [LICENSE](LICENSE).
-
-Built by [Nous Research](https://nousresearch.com).
+Aura Music Agent is distributed under the MIT License.
+Built with heart for Aura Music. Powered by the open-source Hermes Agent framework by [Nous Research](https://nousresearch.com/).
